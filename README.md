@@ -5,5 +5,3 @@ Hello Git
 Learn Git
 - New bullet
 # This is intro
-
-#### test checkout
