@@ -7,3 +7,5 @@ This is note file
 ### Day la bai 7
 
 #### Edit notes.md
+
+Hom nay la ngay 11/09
