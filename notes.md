@@ -9,3 +9,9 @@ This is note file
 #### Edit notes.md
 
 Hom nay la ngay 11/09
+
+Bay gio la 16h58
+
+Bay gio la 17h48
+
+Bay gio la 18h06
