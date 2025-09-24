@@ -1,0 +1,25 @@
+1. Liệt kê tất cả sách và tên tác giả:
+
+select b.title, a.name from books b
+join authors a
+on b.author_id = a.author_id;
+
+
+2. Tìm tất cả đơn hàng của 1 khách hàng:
+
+SELECT o.order_id, o.order_date, o.status
+FROM Orders o
+JOIN Customers c ON o.customer_id = c.customer_id
+WHERE c.full_name = 'Nguyễn Thị B';
+
+
+3. Tính tổng doanh thu theo từng tháng:
+
+select year(o.order_date) as year,
+	month(o.order_date) as month,
+	sum(od.quantity * od.unit_price) as total
+from orders o
+join order_details od
+on o.order_id = od.order_id
+where o.status = "delivered"
+group by year, month;

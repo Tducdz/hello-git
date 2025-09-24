@@ -1,0 +1,12 @@
+- UDP và TCP khác nhau thế nào:
+	+ TCP: 
+		- kết nối 2 đầu
+		- Chờ xác nhận thành công và gửi gói tin lần lượt
+		- kiểm tra lỗi và gửi lại những gói tin bị mất
+	+ UDP: 
+		- Không kết nối 2 đầu
+		- Bỏ qua quá trình kiểm tra lỗi và truyền các gói tin liên tục
+
+- Khi nào nên dùng cái nào:
+	+ Dùng TCP khi cần chắc chắn toàn vẹn dữ liệu, kết nối có xác nhận giữa 2 bên (SMTP, HTTP, HTTPS,...)
+	+ Dùng UDP khi cần tốc độ, chấp nhận bỏ qua mất mát, không cần xác nhận kết nối (Video stream, game online,...)

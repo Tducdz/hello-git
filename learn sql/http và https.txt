@@ -1,0 +1,7 @@
+Cổng mặc định:
+	- HTTP: 80
+	- HTTPS: 443
+
+Làm sao để 1 trang HTTP có thể được cấp thành HTTPS:
+	- Cần đăng ký một chứng chỉ SSL/TLS từ một tổ chức chứng thực uy tín
+ 	- Cài đặt chứng chỉ SSL/TLS trên máy chủ web

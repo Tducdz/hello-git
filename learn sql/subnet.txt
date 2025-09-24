@@ -1,0 +1,44 @@
+Subnet mark - mặt nạ mạng con: dùng để xác định phần của địa chỉ IP và để chia nhỏ mạng lớn thành các mạng con:
+	- đại diện cho network (bit 1)
+	- đại diện cho host (bit 0)
+
+Có 5 lớp: 
+ 	- Lớp A: 
+		+ bit đầu tiên: 0 => 1.0.0.0 --> 126.255.255.255
+		+ subnet mark mặc định: 255.0.0.0 (/8)
+		+ số mạng: 2^7
+		+ số host: 2^24 - 2
+	==> Dùng cho mạng rất lớn
+	
+	- Lớp B: 
+		+ bit đầu tiên: 10 => 128.0.0.0 --> 191.255.255.255
+		+ subnet mark mặc định: 255.255.0.0 (/16)
+		+ số mạng: 2^14
+		+ số host: 2^16 - 2
+	==> Dùng cho tổ chức lớn
+	
+	- Lớp C: 
+		+ bit đầu tiên: 110 => 192.0.0.0 --> 223.255.255.255
+		+ subnet mark mặc định: 255.255.255.0 (/24)
+		+ số mang: 2^21
+		+ số host: 2^8 - 2
+	==> Dùng cho mạng nhỏ
+
+	- Lớp D:
+		+ bit đầu tiên: 1110 => 224.0.0.0 --> 239.255.255.255
+		+ subnet mark không có ý nghĩa do không dùng phân chia host/network
+	==> Dùng cho multicast
+
+	- Lớp E: 
+		+ bit đầu tiên: 1111 => 240.0.0.0 --> 240.255.255.255
+		+ subnet mark không có ý nghĩa do không dùng phân chia host/network
+	==> Dùng cho nghiên cứu
+
+Mẹo tính số lượng host, subnet mark:
+	- Ví dụ mạng có (/n) --> (32 - n) bit cho host
+	==> số host: 2^(32 - n) - 2
+		
+	- Khi chia nhỏ mạng --> Mượn b bit từ phần host để chia
+	==> Số subnet: 2^b
+	==> Muốn tạo a subnet thì cần mượn: log2(a) bit
+	
